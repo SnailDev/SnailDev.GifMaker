@@ -1,0 +1,13 @@
+<view>
+  <!-- <template is="head" data="{{title: 'text'}}"/> -->
+
+  <view class="page-body">
+    <view class="page-section page-section-spacing">
+      <view class="text-box" scroll-y="true" scroll-top="{{scrollTop}}">
+        <text>{{text}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- <template is="foot" /> -->
+</view>

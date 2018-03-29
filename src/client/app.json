@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/tabBar/index/index",
+    "pages/tabBar/about/index",
+    "pages/make/index",
+    "pages/tabBar/contact/index"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "GIF字幕",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/tabBar/index/index",
+        "iconPath": "images/icon_index.png",
+        "selectedIconPath": "images/icon_index_HL.png",
+        "text": "模板"
+      },
+      {
+        "pagePath": "pages/tabBar/about/index",
+        "iconPath": "images/icon_about.png",
+        "selectedIconPath": "images/icon_about_HL.png",
+        "text": "关于"
+      }
+    ]
+  }
+}

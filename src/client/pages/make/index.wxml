@@ -1,0 +1,32 @@
+<view>
+  <view class='card'>
+    <image class='image' data-src='{{gifData.gifDemoUrl}}' src='{{gifData.gifDemoUrl}}' bindtap='bindGifImageTap'></image>
+
+    <block wx:for="{{gifData.contents}}" wx:key="gifData.contents" wx:for-item="item" wx:for-index="itemIdx">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__bd">
+            <input class="weui-input" name="input" placeholder="{{item}}" data-index="{{itemIdx}}" bindinput="bindInput" />
+          </view>
+        </view>
+      </view>
+    </block>
+
+    <view class="btn-area">
+      <button type="primary" bindtap='bindMakeupBtnTap'>咻的一下生成</button>
+    </view>
+
+  </view>
+
+  <modal confirm-text="保存" cancel-text="取消" hidden="{{modalHidden}}" bindconfirm="onSaveClick" bindcancel="onCancelClick">
+    <view>
+      <!--todo 这个地方有些问题，图片的适配没做好-->
+      <image class="modalImage" data-src='{{gifUrl}}' src="{{gifUrl}}" bindtap='bindModalGifImageTap'></image>
+
+      <view class="text-box" scroll-y="true">
+        <text>GIF图片分享和保存指引：\n    1. 点击保存GIF图片\n    2. 下载完成后, 点击GIF图片进入预览模式\n    3. 在预览界面, 长按图片保存或发送给好友</text>
+      </view>
+    </view>
+  </modal>
+
+</view>

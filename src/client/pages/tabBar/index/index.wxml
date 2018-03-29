@@ -1,0 +1,23 @@
+<!-- <import src="../../../common/foot.wxml" /> -->
+
+<view class="index">
+  <view class="index-hd">
+    <!-- <image class="index-logo" src="../../common/resources/kindAPI/logo.png"></image>
+    <view class="index-desc">以下将演示小程序接口能力，具体属性参数详见小程序开发文档。</view> -->
+  </view>
+  <view class="index-bd">
+    <view class="kind-list">
+      <block wx:for="{{cellDatas}}" wx:key="cellDatas" wx:for-item="item" wx:for-index="itemIdx">
+        <view class="card">
+          <view data-idx="{{itemIdx}}" bindtap="bindCellVieWTap">
+            <image class="image" mode="aspectFill" src="{{item.thumbnail}}" />
+            <!-- <text class="time">{{item.createTime}}</text> -->
+            <view class="title">{{item.name}}</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+    <!-- <template is="foot" /> -->
+</view>
