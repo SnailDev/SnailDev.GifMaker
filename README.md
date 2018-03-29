@@ -5,6 +5,8 @@ client  微信小程序
 
 server  nodejs + express
 
+欢迎 star&fork  如果您有好的commit 也可以pull request
+
 ## Introduction
 参考于[sorry](https://github.com/xtyxtyx/sorry), 由@xtyxtyx编写
 但并不使用aegisub为模板视频创建字幕，采用的是FFmpeg 中的filter drawtext, 另，笔者还将继续深入了解FFmpeg,争取早日实现**创作自动化**。
