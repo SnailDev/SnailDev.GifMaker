@@ -1,4 +1,5 @@
 exports.templates = [
+    // sorry
     {
         id: 1,
         name: "sorry为所欲为",
@@ -13,8 +14,6 @@ exports.templates = [
                     "enable": "between(t,1.18,1.56)",
                     'fontfile': 'msyhbd.ttc',
                     'fontcolor': 'white',
-                    //'box': '1',
-                   // 'boxcolor': 'gray@0.2',
                     "fontsize": "14"
                 }
             },
@@ -27,8 +26,6 @@ exports.templates = [
                     "enable": "between(t,3.18,4.43)",
                     'fontfile': 'msyhbd.ttc',
                     'fontcolor': 'white',
-                    //'box': '1',
-                   // 'boxcolor': 'gray@0.2',
                     "fontsize": "14"
                 }
             },
@@ -41,8 +38,6 @@ exports.templates = [
                     "enable": "between(t,5.31,7.43)",
                     'fontfile': 'msyhbd.ttc',
                     'fontcolor': 'white',
-                    //'box': '1',
-                   // 'boxcolor': 'gray@0.2',
                     "fontsize": "14"
                 }
             },
@@ -55,8 +50,6 @@ exports.templates = [
                     "enable": "between(t,7.56,9.93)",
                     'fontfile': 'msyhbd.ttc',
                     'fontcolor': 'white',
-                    //'box': '1',
-                   // 'boxcolor': 'gray@0.2',
                     "fontsize": "14"
                 }
             },
@@ -69,8 +62,6 @@ exports.templates = [
                     "enable": "between(t,10.06,11.56)",
                     'fontfile': 'msyhbd.ttc',
                     'fontcolor': 'white',
-                    //'box': '1',
-                   // 'boxcolor': 'gray@0.2',
                     "fontsize": "14"
                 }
             },
@@ -83,8 +74,6 @@ exports.templates = [
                     "enable": "between(t,11.93,13.06)",
                     'fontfile': 'msyhbd.ttc',
                     'fontcolor': 'white',
-                    //'box': '1',
-                   // 'boxcolor': 'gray@0.2',
                     "fontsize": "14"
                 }
             },
@@ -97,8 +86,6 @@ exports.templates = [
                     "enable": "between(t,13.81,16.31)",
                     'fontfile': 'msyhbd.ttc',
                     'fontcolor': 'white',
-                    //'box': '1',
-                   // 'boxcolor': 'gray@0.2',
                     "fontsize": "14"
                 }
             },
@@ -111,8 +98,6 @@ exports.templates = [
                     "enable": "between(t,18.06,19.56)",
                     'fontfile': 'msyhbd.ttc',
                     'fontcolor': 'white',
-                    //'box': '1',
-                   // 'boxcolor': 'gray@0.2',
                     "fontsize": "14"
                 }
             },
@@ -125,13 +110,13 @@ exports.templates = [
                     "enable": "between(t,19.59,21.60)",
                     'fontfile': 'msyhbd.ttc',
                     'fontcolor': 'white',
-                    //'box': '1',
-                   // 'boxcolor': 'gray@0.2',
                     "fontsize": "14"
                 }
             }
         ]
     },
+
+    // wangjinze
     {
         id: 2,
         name: "",
@@ -146,8 +131,6 @@ exports.templates = [
                     "enable": "between(t,0,1.04)",
                     'fontfile': 'msyhbd.ttc',
                     'fontcolor': 'white',
-                    //'box': '1',
-                   // 'boxcolor': 'gray@0.2',
                     "fontsize": "14"
                 }
             },
@@ -160,8 +143,6 @@ exports.templates = [
                     "enable": "between(t,1.46,2.90)",
                     'fontfile': 'msyhbd.ttc',
                     'fontcolor': 'white',
-                    //'box': '1',
-                   // 'boxcolor': 'gray@0.2',
                     "fontsize": "14"
                 }
             },
@@ -174,8 +155,6 @@ exports.templates = [
                     "enable": "between(t,3.09,4.33)",
                     'fontfile': 'msyhbd.ttc',
                     'fontcolor': 'white',
-                    //'box': '1',
-                   // 'boxcolor': 'gray@0.2',
                     "fontsize": "14"
                 }
             },
@@ -188,11 +167,11 @@ exports.templates = [
                     "enable": "between(t,4.59,5.93)",
                     'fontfile': 'msyhbd.ttc',
                     'fontcolor': 'white',
-                    //'box': '1',
-                   // 'boxcolor': 'gray@0.2',
                     "fontsize": "14"
                 }
             }
         ]
     }
+
+    // 
 ]

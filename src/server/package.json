@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "auto-reload": "^0.1.0",
     "express": "^4.16.3",
     "ffmpeg-static": "^2.2.0",
     "fluent-ffmpeg": "^2.1.2"
