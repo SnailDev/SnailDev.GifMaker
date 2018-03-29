@@ -1,6 +1,8 @@
 # SnailDev.GifMaker
 一个生成gif并添加自定义字幕的工具
+
 client  微信小程序
+
 server  nodejs + express
 
 ## Introduction
@@ -12,13 +14,13 @@ server  nodejs + express
 
 开放接口：
 
-获取category
+1.获取category
 
 ```
 GET https://gifmaker.develophelper.com/gif/category
 ```
 
-制作gif
+2.制作gif
 
 ```
 POST https://gifmaker.develophelper.com/gif/make
@@ -26,6 +28,17 @@ Content-Type: application/x-www-form-urlencoded
 Body: tplid=1&                         // 模板ID
         quality=1&                       // 画质（暂时无效）                
         content=好啊##$@?$?@$##就算你是一流工程师##$@?$?@$##就算你出报告再完美##$@?$?@$##我叫你改报告你就要改##$@?$?@$##毕竟我是客户##$@?$?@$##客户了不起啊##$@?$?@$##sorry 客户真的了不起##$@?$?@$##以后叫他天天改报告##$@?$?@$##天天改 天天改  //字幕内容（以##$@?$?@$##作为分隔符）
+```
+
+3.返回结果
+```javascript
+{
+"m": 0,      // code 0 successful
+"d":{        // d data
+    "gifurl": "http://gifmaker.develophelper.com/cache/1_1a322f1b7dd9633e5433d0e0152e18a6a924cb23.gif"
+},
+"e": ""      // e errMsg
+}
 ```
 
 ## Structure
