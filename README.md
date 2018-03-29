@@ -1,32 +1,34 @@
-## SnailDev.GifMaker
+# SnailDev.GifMaker
 一个生成gif并添加自定义字幕的工具
 client  微信小程序
 server  nodejs + express
 
-开放接口：
-
-获取category
-    ```bash
-    GET https://gifmaker.develophelper.com/gif/category
-    ```
-制作gif
-```bash
-    POST https://gifmaker.develophelper.com/gif/make
-    Content-Type: application/x-www-form-urlencoded
-    Body: tplid=1&                         // 模板ID
-          quality=1&                       // 画质（暂时无效）                
-          content=好啊##$@?$?@$##就算你是一流工程师##$@?$?@$##就算你出报告再完美##$@?$?@$##我叫你改报告你就要改##$@?$?@$##毕竟我是客户##$@?$?@$##客户了不起啊##$@?$?@$##sorry 客户真的了不起##$@?$?@$##以后叫他天天改报告##$@?$?@$##天天改 天天改  //字幕内容（以##$@?$?@$##作为分隔符）
-```
-
-
-### Introduction
+## Introduction
 参考于[sorry](https://github.com/xtyxtyx/sorry), 由@xtyxtyx编写
 但并不使用aegisub为模板视频创建字幕，采用的是FFmpeg 中的filter drawtext, 另，笔者还将继续深入了解FFmpeg,争取早日实现**创作自动化**。
 
 可生成如下案列：
-![](server/public/demo/gif/1.gif)
+![](src/server/public/demo/gif/1.gif)
 
-### Structure
+开放接口：
+
+获取category
+
+```
+GET https://gifmaker.develophelper.com/gif/category
+```
+
+制作gif
+
+```
+POST https://gifmaker.develophelper.com/gif/make
+Content-Type: application/x-www-form-urlencoded
+Body: tplid=1&                         // 模板ID
+        quality=1&                       // 画质（暂时无效）                
+        content=好啊##$@?$?@$##就算你是一流工程师##$@?$?@$##就算你出报告再完美##$@?$?@$##我叫你改报告你就要改##$@?$?@$##毕竟我是客户##$@?$?@$##客户了不起啊##$@?$?@$##sorry 客户真的了不起##$@?$?@$##以后叫他天天改报告##$@?$?@$##天天改 天天改  //字幕内容（以##$@?$?@$##作为分隔符）
+```
+
+## Structure
 ```
 ├─client                    // 客户端参考微信小程序结构
 │
@@ -51,7 +53,7 @@ server  nodejs + express
    └─test                   // 测试目录
 ```
 
-### DependOn
+## DependOn
 server
 
 ```
@@ -59,12 +61,12 @@ server
 "fluent-ffmpeg": "^2.1.2"
 ```
 
-### How to Use
+## How to Use
 1. 制作视频模板 放到 data/template/ 目录下
 2. 给data/category.js 和data/template.js 添加相关配置
 3. 将做好的demo放到 public/demo/gif/下 缩略图放到 public/demo/thumbnail/下
 
-### Interpretation
+## Interpretation
 ```javascript
 {
     filter: "drawtext",                     // filter类型 
@@ -81,6 +83,6 @@ server
 ```
 更多参考 [FFmpeg Filters Documentation](http://www.ffmpeg.org/ffmpeg-filters.html#drawtext-1)
 
-### License
+## License
 
 The MIT License (MIT). Please see [LICENSE](LICENSE) for more information.
