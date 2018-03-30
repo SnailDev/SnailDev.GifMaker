@@ -1,0 +1,70 @@
+<%- include("./header.ejs") %>
+    <div class="row">
+
+        <div class="col-lg-3">
+        </div>
+
+        <div class="col-lg-6">
+
+            <div class="card mt-4">
+                <img class="card-img-top img-fluid" src="<%= data.gifDemoUrl %>" alt="">
+                <div class="card-body">
+                    <!-- <h3 class="card-title">Product Name</h3>
+              <h4>$24.99</h4> -->
+                    <p class="card-text">
+                        <%= data.name %>
+                    </p>
+                    <!-- <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+              4.0 stars -->
+                </div>
+            </div>
+            <!-- /.card -->
+
+            <div class="card card-outline-secondary my-4">
+                <div class="card-header">
+                    字幕
+                </div>
+                <div class="card-body">
+                    <% data.contents.split('##$@?$?@$##').forEach(function(item,index){%>
+                        <div class="form-group">
+                            <input type="text" class="form-control" data-index="<%= index %>" placeholder="<%= item %>" />
+                        </div>
+                        <% }) %>
+
+                            <hr>
+                            <a href="javascript:void(0);" id="make" class="btn btn-success">咻的一下生成</a>
+
+                            <script>
+                                var tplid = '<%= data.gifType %>';
+                                var contentStr = '<%= data.contents %>';
+                                // console.log(tplid);
+                                var newContentObj = contentStr.split('##$@?$?@$##');
+
+                                $('input').bind("input propertychange", function () {
+                                    var $this = $(this);
+                                    var index = $this.data('index');
+                                    newContentObj[index] = $this.val();
+                                });
+
+                                $('#make').click(function () {
+                                    var data = "tplid=" + tplid + "&contents=" + newContentObj.join('##$@?$?@$##');
+                                    $.post("https://gifmaker.develophelper.com/gif/make", data, function (res) { 
+                                        console.log(res);
+
+                                    }, 'json');
+                                });
+
+                            </script>
+                </div>
+            </div>
+            <!-- /.card -->
+
+        </div>
+        <!-- /.col-lg-9 -->
+        <div class="col-lg-3">
+        </div>
+
+    </div>
+
+
+    <%- include("./footer.ejs") %>
