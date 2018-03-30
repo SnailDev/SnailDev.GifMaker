@@ -5,7 +5,6 @@ var config = reload('./data/category');
 var templates = reload('./data/template');
 var express = require('express');
 var bodyParser = require('body-parser');
-var crypto = require('crypto');
 var fs = require('fs');
 var app = express();
 

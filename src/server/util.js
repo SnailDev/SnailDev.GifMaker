@@ -1,4 +1,5 @@
 const SERVER = 'https://gifmaker.develophelper.com/';
+var crypto = require('crypto');
 
 exports.sha1 = function (str) {
     var md5sum = crypto.createHash('sha1');
