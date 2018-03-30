@@ -1,4 +1,3 @@
-const SERVER = 'https://gifmaker.develophelper.com/';
 var crypto = require('crypto');
 
 exports.sha1 = function (str) {
@@ -7,3 +6,5 @@ exports.sha1 = function (str) {
     str = md5sum.digest('hex');
     return str;
 }
+
+exports.SERVER = 'https://gifmaker.develophelper.com/';

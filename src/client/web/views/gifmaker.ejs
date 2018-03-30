@@ -47,10 +47,10 @@
                                 });
 
                                 $('#make').click(function () {
-                                    var data = "tplid=" + tplid + "&contents=" + newContentObj.join('##$@?$?@$##');
-                                    $.post("https://gifmaker.develophelper.com/gif/make", data, function (res) { 
-                                        console.log(res);
-
+                                    var data = "tplid=" + tplid + "&content=" + newContentObj.join('##$@?$?@$##');
+                                    $.post("https://gifmaker.develophelper.com/gif/make", data, function (res) {
+                                       // console.log(res);
+                                        location.href = res.d.gifurl;
                                     }, 'json');
                                 });
 
