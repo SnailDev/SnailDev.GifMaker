@@ -171,7 +171,86 @@ exports.templates = [
                 }
             }
         ]
-    }
+    },
 
-    // 
+    // 窃格瓦拉 
+    {
+        id: 3,
+        name: "窃格瓦拉 打工",
+        hash: "a426cb71a9bc130b878a178aab8273983abe001a",
+        template: [
+            {
+                filter: "drawtext",
+                options: {
+                    "text": "没有钱啊 肯定要做的啊",
+                    "x": "(w-text_w)/2",
+                    "y": "h-text_h-4",
+                    "enable": "between(t,0,1.80)",
+                    'fontfile': 'msyhbd.ttc',
+                    'fontcolor': 'white',
+                    "fontsize": "14"
+                }
+            },
+            {
+                filter: "drawtext",
+                options: {
+                    "text": "不做的话没有钱用",
+                    "x": "(w-text_w)/2",
+                    "y": "h-text_h-4",
+                    "enable": "between(t,1.88,3.76)",
+                    'fontfile': 'msyhbd.ttc',
+                    'fontcolor': 'white',
+                    "fontsize": "14"
+                }
+            },
+            {
+                filter: "drawtext",
+                options: {
+                    "text": "那你不会去打工啊",
+                    "x": "(w-text_w)/2",
+                    "y": "h-text_h-4",
+                    "enable": "between(t,3.81,4.66)",
+                    'fontfile': 'msyhbd.ttc',
+                    'fontcolor': 'white',
+                    "fontsize": "14"
+                }
+            },
+            {
+                filter: "drawtext",
+                options: {
+                    "text": "有手有脚的",
+                    "x": "(w-text_w)/2",
+                    "y": "h-text_h-4",
+                    "enable": "between(t,4.66,5.90)",
+                    'fontfile': 'msyhbd.ttc',
+                    'fontcolor': 'white',
+                    "fontsize": "14"
+                }
+            },
+            {
+                filter: "drawtext",
+                options: {
+                    "text": "打工是不可能打工的",
+                    "x": "(w-text_w)/2",
+                    "y": "h-text_h-4",
+                    "enable": "between(t,6.02,8.42)",
+                    'fontfile': 'msyhbd.ttc',
+                    'fontcolor': 'white',
+                    "fontsize": "14"
+                }
+            },
+            {
+                filter: "drawtext",
+                options: {
+                    "text": "这辈子不可能打工的",
+                    "x": "(w-text_w)/2",
+                    "y": "h-text_h-4",
+                    "enable": "between(t,8.42,10.75)",
+                    'fontfile': 'msyhbd.ttc',
+                    'fontcolor': 'white',
+                    "fontsize": "14"
+                }
+            }
+        ]
+    },
 ]
