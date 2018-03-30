@@ -22,6 +22,14 @@ Items = [
         "gifType": 3,
         "name": "打工这辈子是不可能打工的（来源：窃格瓦拉 打工）",
         "thumbnail": "http://gifmaker.develophelper.com/demo/thumbnail/3.png"
+    },
+    {
+        "tplid": 4,
+        "contents": "没想到##$@?$?@$##你竟说出如此粗鄙之语",
+        "gifDemoUrl": "http://gifmaker.develophelper.com/demo/gif/4.gif",
+        "gifType": 4,
+        "name": "你竟说出如此粗鄙之语（来源：诸葛孔明《三国演义》）",
+        "thumbnail": "http://gifmaker.develophelper.com/demo/thumbnail/4.png"
     }
 ];
 

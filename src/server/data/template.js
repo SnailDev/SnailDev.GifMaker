@@ -119,7 +119,7 @@ exports.templates = [
     // wangjinze
     {
         id: 2,
-        name: "",
+        name: "我就是饿死",
         hash: "7d9e4017feed1e5ae9e114c95b57f59b051f1256",
         template: [
             {
@@ -246,6 +246,39 @@ exports.templates = [
                     "x": "(w-text_w)/2",
                     "y": "h-text_h-4",
                     "enable": "between(t,8.42,10.75)",
+                    'fontfile': 'msyhbd.ttc',
+                    'fontcolor': 'white',
+                    "fontsize": "14"
+                }
+            }
+        ]
+    },
+
+    // 诸葛孔明
+    {
+        id: 2,
+        name: "竟说出如此卑鄙之语",
+        hash: "c4f50699b9d7d96c5fdb4701efc759cd02e3f0b6",
+        template: [
+            {
+                filter: "drawtext",
+                options: {
+                    "text": "没想到",
+                    "x": "(w-text_w)/2",
+                    "y": "h-text_h-4",
+                    "enable": "between(t,0.81,1.81)",
+                    'fontfile': 'msyhbd.ttc',
+                    'fontcolor': 'white',
+                    "fontsize": "14"
+                }
+            },
+            {
+                filter: "drawtext",
+                options: {
+                    "text": "你竟说出如此粗鄙之语",
+                    "x": "(w-text_w)/2",
+                    "y": "h-text_h-4",
+                    "enable": "between(t,2.31,5.42)",
                     'fontfile': 'msyhbd.ttc',
                     'fontcolor': 'white',
                     "fontsize": "14"
