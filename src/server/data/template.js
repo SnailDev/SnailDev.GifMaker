@@ -256,7 +256,7 @@ exports.templates = [
 
     // 诸葛孔明
     {
-        id: 2,
+        id: 4,
         name: "竟说出如此卑鄙之语",
         hash: "c4f50699b9d7d96c5fdb4701efc759cd02e3f0b6",
         template: [
@@ -279,6 +279,87 @@ exports.templates = [
                     "x": "(w-text_w)/2",
                     "y": "h-text_h-4",
                     "enable": "between(t,2.31,5.42)",
+                    'fontfile': 'msyhbd.ttc',
+                    'fontcolor': 'white',
+                    "fontsize": "14"
+                }
+            }
+        ]
+    },
+
+    // 金坷垃
+    {
+        id: 5,
+        name: "金坷垃好处都有啥 谁说对了都给他",
+        hash: "5f13a58aa24c8ddf7bfbaa1546e30c1ba8606cb6",
+        template: [
+            {
+                filter: "drawtext",
+                options: {
+                    "text": "金坷垃好处都有啥",
+                    "x": "(w-text_w)/2",
+                    "y": "h-text_h-4",
+                    "enable": "between(t,0,2.56)",
+                    'fontfile': 'msyhbd.ttc',
+                    'fontcolor': 'white',
+                    "fontsize": "14"
+                }
+            },
+            {
+                filter: "drawtext",
+                options: {
+                    "text": "谁说对了就给他",
+                    "x": "(w-text_w)/2",
+                    "y": "h-text_h-4",
+                    "enable": "between(t,2.56,4.31)",
+                    'fontfile': 'msyhbd.ttc',
+                    'fontcolor': 'white',
+                    "fontsize": "14"
+                }
+            },
+            {
+                filter: "drawtext",
+                options: {
+                    "text": "肥料掺了金坷垃",
+                    "x": "(w-text_w)/2",
+                    "y": "h-text_h-4",
+                    "enable": "between(t,2.56,5.56)",
+                    'fontfile': 'msyhbd.ttc',
+                    'fontcolor': 'white',
+                    "fontsize": "14"
+                }
+            },
+            {
+                filter: "drawtext",
+                options: {
+                    "text": "不流失 不蒸发 零浪费",
+                    "x": "(w-text_w)/2",
+                    "y": "h-text_h-4",
+                    "enable": "between(t,5.56,8.68)",
+                    'fontfile': 'msyhbd.ttc',
+                    'fontcolor': 'white',
+                    "fontsize": "14"
+                }
+            },
+            {
+                filter: "drawtext",
+                options: {
+                    "text": "肥料掺了金坷垃",
+                    "x": "(w-text_w)/2",
+                    "y": "h-text_h-4",
+                    "enable": "between(t,9.81,11.93)",
+                    'fontfile': 'msyhbd.ttc',
+                    'fontcolor': 'white',
+                    "fontsize": "14"
+                }
+            },
+            {
+                filter: "drawtext",
+                options: {
+                    "text": "能吸收两米下的氮磷钾",
+                    "x": "(w-text_w)/2",
+                    "y": "h-text_h-4",
+                    "enable": "between(t,12.06,14.68)",
                     'fontfile': 'msyhbd.ttc',
                     'fontcolor': 'white',
                     "fontsize": "14"

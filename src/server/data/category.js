@@ -30,6 +30,14 @@ Items = [
         "gifType": 4,
         "name": "你竟说出如此粗鄙之语（来源：诸葛孔明《三国演义》）",
         "thumbnail": "http://gifmaker.develophelper.com/demo/thumbnail/4.png"
+    },
+    {
+        "tplid": 5,
+        "contents": "金坷垃好处都有啥##$@?$?@$##谁说对了就给他##$@?$?@$##肥料掺了金坷垃##$@?$?@$##不流失 不蒸发 零浪费##$@?$?@$##肥料掺了金坷垃##$@?$?@$##能吸收两米下的氮磷钾",
+        "gifDemoUrl": "http://gifmaker.develophelper.com/demo/gif/5.gif",
+        "gifType": 5,
+        "name": "金坷垃好处都有啥 谁说对了都给他（来源：金坷垃广告）",
+        "thumbnail": "http://gifmaker.develophelper.com/demo/thumbnail/5.png"
     }
 ];
 
