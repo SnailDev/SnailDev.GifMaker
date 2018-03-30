@@ -20,10 +20,10 @@ router.get('/gifmaker', function (req, res, next) {
 router.get('/opus', function (req, res, next) {
   var fileList = util.getFileList('../../server/public/cache/');
   fileList.sort(function (a, b) {
-    return Date.parse(b.ctime) - Date.parse(a.ctime);//时间正序
+    return Date.parse(a.ctime) - Date.parse(b.ctime);//时间正序
   });
 
-  res.render('opus', { title: '字幕制作', data: fileList });
+  res.render('opus', { title: '字幕制作', data: fileList.slice(-16) });
 });
 
 module.exports = router;
