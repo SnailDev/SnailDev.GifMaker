@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var request = require('request');
+var util = require('../util/utils');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -14,6 +15,12 @@ router.get('/gifmaker', function (req, res, next) {
   request("https://gifmaker.develophelper.com/gif/category", function (error, response, body) {
     res.render('gifmaker', { title: '字幕制作', data: JSON.parse(body).d[index] });
   });
+});
+
+router.get('/opus', function (req, res, next) {
+  var fileList = util.getFileList('../../server/public/cache/');
+  console.log(fileList);
+  res.render('opus', { title: '字幕制作', data: fileList });
 });
 
 module.exports = router;
