@@ -10,7 +10,6 @@ function readFileList(path, filesList) {
     var files = fs.readdirSync(path);
     files.forEach(function (itm, index) {
         var stat = fs.statSync(path + itm);
-        console.log(stat);
         if (stat.isDirectory()) {
             //递归读取文件
             readFileList(path + itm + "/", filesList)

@@ -19,8 +19,11 @@ router.get('/gifmaker', function (req, res, next) {
 
 router.get('/opus', function (req, res, next) {
   var fileList = util.getFileList('../../server/public/cache/');
-  console.log(fileList);
-  res.render('opus', { title: '字幕制作', data: fileList });
+  fileList.sort(function (a, b) {
+    return Date.parse(b.ctime) - Date.parse(a.ctime);//时间正序
+  });
+
+  res.render('opus', { title: '字幕制作', data: fileList.slice(-1, 19) });
 });
 
 module.exports = router;
