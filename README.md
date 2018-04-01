@@ -10,9 +10,7 @@ server  nodejs + express
 体验Demo [sorry.web](http://sorry.develophelper.com/)
 
 ## Introduction
-参考于[sorry](https://github.com/xtyxtyx/sorry), 由@xtyxtyx编写
-
-但本工具并不使用aegisub为模板视频创建字幕，采用的是FFmpeg 中的filter drawtext, 另，笔者还将继续深入了解FFmpeg,争取早日实现**创作自动化**。
+本工具并不使用aegisub为模板视频创建字幕，采用的是FFmpeg 中的filter drawtext, 另，笔者还将继续深入了解FFmpeg,争取早日实现**创作自动化**。
 
 可生成如下案列：
 
