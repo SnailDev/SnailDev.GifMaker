@@ -7,7 +7,7 @@ server  nodejs + express
 
 欢迎 star&fork  如果您有好的commit 也可以pull request
 
-体验Demo [sorry.web](http://sorry.develophelper.com/)
+体验 [Demo](http://sorry.develophelper.com/)
 
 ## Introduction
 灵感参考与 Xuty 的 [sorry](https://github.com/xtyxtyx/sorry)
