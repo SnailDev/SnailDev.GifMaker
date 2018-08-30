@@ -34,6 +34,8 @@ app.post("/pageviews", function (req, res) {
     var host = req.body.host;
     var urls = req.body['urls[]'];
 
+    console.log(urls);
+
     fs.readFile('./data/blogpageviews.json', function (err, data) {
         if (err) {
             console.error(err);
