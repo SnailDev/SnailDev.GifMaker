@@ -13,13 +13,13 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.all('*', function(req, res, next) {
-	res.header("Access-Control-Allow-Origin", "*");
-	res.header("Access-Control-Allow-Headers", "X-Requested-With");
-	res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
-	res.header("X-Powered-By",' 3.2.1');
-	res.header("Content-Type", "application/json;charset=utf-8");
-	next();
+app.all('*', function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
+    res.header("X-Powered-By", ' 3.2.1');
+    res.header("Content-Type", "application/json;charset=utf-8");
+    next();
 });
 
 app.get('/', function (req, res) {
@@ -28,6 +28,45 @@ app.get('/', function (req, res) {
 
 app.post('/', function (req, res) {
     res.send('Hello World_1.6.1 success >.< POST');
+});
+
+app.post("/pageviews", function (req, res) {
+    var host = req.host;
+    var urls = req.urls[];
+
+    console.log(host);
+    console.log(urls);
+
+    fs.readFile('./data/blogpageviews.json',function(err,data){
+        if(err){
+            console.error(err);
+        }
+        var pageviews = data.toString();
+        pageviews = JSON.parse(pageviews);
+        // //把数据读出来,然后进行修改
+        // for(var i = 0; i < person.data.length;i++){
+        //     if(id == person.data[i].id){
+        //         console.log('id一样的');
+        //         for(var key in params){
+        //             if(person.data[i][key]){
+        //                 person.data[i][key] = params[key];
+        //             }
+        //         }
+        //     }
+        // }
+      
+        var str = JSON.stringify(pageviews);
+        //console.log(str);
+        fs.writeFile('./data/blogpageviews.json',str,function(err){
+            if(err){
+                console.error(err);
+            }
+            console.log('--------------------修改成功');
+
+            res.json(pageviews);
+        })
+    })
+
 });
 
 app.get('/gif/category', function (req, res) {
