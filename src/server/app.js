@@ -31,11 +31,11 @@ app.post('/', function (req, res) {
 });
 
 app.post("/pageviews", function (req, res) {
-    var host = req.host;
-    var urls = req.urls[];
+    var host = req.body.host;
+    //var urls = req.urls[];
 
     console.log(host);
-    console.log(urls);
+    console.log(req.body);
 
     fs.readFile('./data/blogpageviews.json',function(err,data){
         if(err){
