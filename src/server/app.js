@@ -32,33 +32,28 @@ app.post('/', function (req, res) {
 
 app.post("/pageviews", function (req, res) {
     var host = req.body.host;
-    //var urls = req.urls[];
+    var urls = req.body['urls[]'];
 
-    console.log(host);
-    console.log(req.body);
-
-    fs.readFile('./data/blogpageviews.json',function(err,data){
-        if(err){
+    fs.readFile('./data/blogpageviews.json', function (err, data) {
+        if (err) {
             console.error(err);
         }
         var pageviews = data.toString();
         pageviews = JSON.parse(pageviews);
-        // //把数据读出来,然后进行修改
-        // for(var i = 0; i < person.data.length;i++){
-        //     if(id == person.data[i].id){
-        //         console.log('id一样的');
-        //         for(var key in params){
-        //             if(person.data[i][key]){
-        //                 person.data[i][key] = params[key];
-        //             }
-        //         }
-        //     }
-        // }
-      
+        //把数据读出来,然后进行修改
+        for (var i = 0; i < urls.length; i++) {
+            if (pageviews['pageviews'].hasOwnProperty(urls[i])) {
+                pageviews['pageviews'][urls[i]] = pageviews['pageviews'][urls[i]] + 1;
+            } else {
+                pageviews['pageviews'][urls[i]] = 1;
+            }
+            pageviews['pageviews']['/'] = pageviews['pageviews']['/'] + 1;
+        }
+
         var str = JSON.stringify(pageviews);
         //console.log(str);
-        fs.writeFile('./data/blogpageviews.json',str,function(err){
-            if(err){
+        fs.writeFile('./data/blogpageviews.json', str, function (err) {
+            if (err) {
                 console.error(err);
             }
             console.log('--------------------修改成功');
