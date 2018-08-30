@@ -35,6 +35,10 @@ app.post("/pageviews", function (req, res) {
     var urls = req.body['urls[]'];
 
     console.log(urls);
+    if (typeof (urls) == 'string') {
+        urls = [urls];
+    }
+    console.log(urls);
 
     fs.readFile('./data/blogpageviews.json', function (err, data) {
         if (err) {
