@@ -47,7 +47,7 @@ app.post("/pageviews", function (req, res) {
         var pageviews = data.toString();
         pageviews = JSON.parse(pageviews);
         
-        if(urls == 'undefined'){
+        if(!urls){
             res.json({"/":pageviews['pageviews']['/']});
         }
         else{
