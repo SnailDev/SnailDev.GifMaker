@@ -46,6 +46,10 @@ app.post("/pageviews", function (req, res) {
         }
         var pageviews = data.toString();
         pageviews = JSON.parse(pageviews);
+        
+        if(urls == 'undefined')
+            return res.json({"/":pageviews['pageviews']['/']});
+        
         //把数据读出来,然后进行修改
         for (var i = 0; i < urls.length; i++) {
             if (pageviews['pageviews'].hasOwnProperty(urls[i])) {
