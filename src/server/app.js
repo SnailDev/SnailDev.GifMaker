@@ -47,29 +47,31 @@ app.post("/pageviews", function (req, res) {
         var pageviews = data.toString();
         pageviews = JSON.parse(pageviews);
         
-        if(urls == 'undefined')
-            return res.json({"/":pageviews['pageviews']['/']});
-        
-        //把数据读出来,然后进行修改
-        for (var i = 0; i < urls.length; i++) {
-            if (pageviews['pageviews'].hasOwnProperty(urls[i])) {
-                pageviews['pageviews'][urls[i]] = pageviews['pageviews'][urls[i]] + 1;
-            } else {
-                pageviews['pageviews'][urls[i]] = 1;
-            }
-            pageviews['pageviews']['/'] = pageviews['pageviews']['/'] + 1;
+        if(urls == 'undefined'){
+            res.json({"/":pageviews['pageviews']['/']});
         }
-
-        var str = JSON.stringify(pageviews);
-        //console.log(str);
-        fs.writeFile('./data/blogpageviews.json', str, function (err) {
-            if (err) {
-                console.error(err);
+        else{
+            //把数据读出来,然后进行修改
+            for (var i = 0; i < urls.length; i++) {
+                if (pageviews['pageviews'].hasOwnProperty(urls[i])) {
+                    pageviews['pageviews'][urls[i]] = pageviews['pageviews'][urls[i]] + 1;
+                } else {
+                    pageviews['pageviews'][urls[i]] = 1;
+                }
+                pageviews['pageviews']['/'] = pageviews['pageviews']['/'] + 1;
             }
-            console.log('--------------------修改成功');
 
-            res.json(pageviews);
-        })
+            var str = JSON.stringify(pageviews);
+            //console.log(str);
+            fs.writeFile('./data/blogpageviews.json', str, function (err) {
+                if (err) {
+                    console.error(err);
+                }
+                console.log('--------------------修改成功');
+
+                res.json(pageviews);
+            });
+        }
     })
 
 });
