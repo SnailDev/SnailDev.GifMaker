@@ -2,7 +2,7 @@
 一个生成gif并添加自定义字幕的工具
 
 client  微信小程序
-![](gh_ace19050bc5e_1280.jpg)
+![](gh_ace19050bc5e_430.jpg)
 server  nodejs + express
 
 欢迎 star&fork  如果您有好的commit 也可以pull request
